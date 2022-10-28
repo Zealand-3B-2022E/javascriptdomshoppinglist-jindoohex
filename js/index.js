@@ -1,5 +1,6 @@
 //Write your Javascript code here
 console.log("Shoppinglist")
+
 // document.getElementById("addGoodsButton").addEventListener('click',addGoods);
 // let elementInput = document.getElementById('addGoods');
 
@@ -31,9 +32,11 @@ console.log("Shoppinglist")
 //     }
 // }
 
+
 // AddEventListener
 const getList = document.getElementById('list')
 const getButton = document.getElementById('addGoodsButton')
+const showHiddenItems = document.getElementById('showHiddenItems')
 
 // Adding goods button
 getButton.addEventListener('click', 'addGoods')
@@ -64,3 +67,13 @@ function clickToHideItem(e)
         clickElement.setAttribute('hidden', 'true');
     }
 }
+
+showHiddenItems.addEventListener('click', function (e){
+    for (let i = 0; i < getList.children.length; i++){
+        const element = getList.children[i];
+        console.log("Elements hidden" + element.getAttribute("hidden") == "true")
+        if(element.getAttribute("hidden") == "true"){
+            element.removeAttribute("hidden")
+        }
+    }
+});
