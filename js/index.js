@@ -15,7 +15,7 @@ const showHiddenItems = document.getElementById('showHiddenItems')
 
 
 // Adding goods button
-getButton.addEventListener('click', 'addGoods')
+getButton.addEventListener('click', addGoods)
 function addGoods(e){
     console.log("In the addgoods function");
     let inputText = (elementInput).value;
@@ -47,7 +47,7 @@ function clickToHideItem(e)
 
 
 // Showing all items that was hidden
-getList.addEventListener('click', showHiddenItems)
+// getList.addEventListener('click', showHiddenItems)
 showHiddenItems.addEventListener('click', function (e){
     for (let i = 0; i < getList.children.length; i++) {
         const element = getList.children[i];
@@ -57,3 +57,4 @@ showHiddenItems.addEventListener('click', function (e){
         }
     }
 });
+
